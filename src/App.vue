@@ -1,7 +1,9 @@
 <template>
     <h1>{{ courseName }}</h1>
     <p>Course by {{ mentor }}</p>
-    <button @click="count++">Count:{{ count }}</button>
+    <button @click="count++">+</button>
+    <h3>Count:{{ count }}</h3>
+    <button @click="count--">-</button>
 </template>
 <script>
 export default{
