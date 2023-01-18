@@ -5,7 +5,8 @@
     <h3>Count:{{ count }}</h3>
     <button @click="count--">-</button>
 </template>
-<script>
+//option api
+<!-- <script>
 export default{
     data(){
         return {
@@ -16,4 +17,26 @@ export default{
     }
 }
 
+</script> -->
+
+<!-- <script>
+    import { ref } from 'vue';
+    export default {
+        setup(){
+            let count = 0;
+            const courseName = "Vue JS Learning";
+            const mentor ="Md. Abul Kalam Azad";
+
+        return {
+            count, courseName, mentor
+        }
+    }
+   }
+</script> -->
+//script setup way
+<script setup>
+    import { ref } from 'vue';
+    let count = ref(0);
+    const courseName = ref("Vue JS Learning");
+    const mentor =ref("Md. Abul Kalam Azad");
 </script>
