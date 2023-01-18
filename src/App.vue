@@ -1,6 +1,9 @@
 <template>
+    //v-model use for two way data binding
+    <input type="text" v-model="course.courseName">
     <h1>{{ course.courseName }}</h1>
     <p>Course by {{ course.mentor }}</p>
+    <input type="number" v-model="count">
     <button @click="count++">+</button>
     <h3>Count:{{ count }}</h3>
     <button @click="count--">-</button>
