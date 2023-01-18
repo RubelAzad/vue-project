@@ -1,6 +1,6 @@
 <template>
-    <h1>{{ courseName }}</h1>
-    <p>Course by {{ mentor }}</p>
+    <h1>{{ course.courseName }}</h1>
+    <p>Course by {{ course.mentor }}</p>
     <button @click="count++">+</button>
     <h3>Count:{{ count }}</h3>
     <button @click="count--">-</button>
@@ -34,9 +34,22 @@ export default{
    }
 </script> -->
 //script setup way
-<script setup>
+<!-- <script setup>
     import { ref } from 'vue';
     let count = ref(0);
     const courseName = ref("Vue JS Learning");
     const mentor =ref("Md. Abul Kalam Azad");
+</script> -->
+
+<script setup>
+    import { ref, reactive } from 'vue';
+    let count = ref(0);
+    count.value =10;
+    let course = reactive({
+        courseName: "Vue JS Learning",
+        mentor: "Md. Abul Kalam Azad",
+    })
+
+    course.courseName = "abc";
+    
 </script>
